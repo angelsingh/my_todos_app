@@ -23,7 +23,7 @@ for index, todo in enumerate(st.session_state['todos']):
     if checkbox:
         st.session_state['todos'].pop(index)  # Remove from session state
         func.write_todos(st.session_state['todos'])  # Save updated list to file
-        st.experimental_rerun()  # Refresh the app state
+        st.rerun()  # Refresh the app state
 
 # Input field for adding new todos
 st.text_input(label="Add a new todo item:", placeholder="Type here...",
